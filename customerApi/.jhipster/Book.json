@@ -1,0 +1,53 @@
+{
+  "applications": ["bookstore", "customerApi", "bookApi", "orderApi"],
+  "changelogDate": "20230918235147",
+  "clientRootFolder": "customerApi",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "book",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "author",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publicationYear",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "genre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "quantityInStock",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "customerApi",
+  "name": "Book",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "shoppingCart",
+      "otherEntityRelationshipName": "books",
+      "relationshipName": "shoppingCarts",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,42 @@
+{
+  "applications": ["bookstore", "customerApi", "bookApi", "orderApi"],
+  "changelogDate": "20230918235447",
+  "clientRootFolder": "customerApi",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "shopping_cart",
+  "fields": [
+    {
+      "fieldName": "purchaseDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "customerApi",
+  "name": "ShoppingCart",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "shoppingCarts",
+      "relationshipName": "books",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "shoppingCart",
+      "relationshipName": "order",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
