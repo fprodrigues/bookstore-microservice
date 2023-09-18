@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="shoppingCart">
+      <h2 data-cy="shoppingCartDetailsHeading"><span jhiTranslate="bookstoreApp.orderApiShoppingCart.detail.title">Shopping Cart</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ shoppingCart.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="bookstoreApp.orderApiShoppingCart.purchaseDate">Purchase Date</span></dt>
+        <dd>
+          <span>{{ shoppingCart.purchaseDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="bookstoreApp.orderApiShoppingCart.status">Status</span></dt>
+        <dd>
+          <span>{{ shoppingCart.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="bookstoreApp.orderApiShoppingCart.order">Order</span></dt>
+        <dd>
+          <div *ngIf="shoppingCart.order">
+            <a [routerLink]="['/order', shoppingCart.order.id, 'view']">{{ shoppingCart.order.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/shopping-cart', shoppingCart.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
