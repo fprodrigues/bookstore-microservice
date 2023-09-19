@@ -1,0 +1,89 @@
+
+application {
+  config {
+    baseName bookstore
+    applicationType gateway
+    packageName com.bookstore.app
+    serviceDiscoveryType consul
+    authenticationType jwt
+    prodDatabaseType postgresql
+    clientFramework angular
+    serverPort 8080
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName customerApi
+    applicationType microservice
+    packageName com.customerapi.app
+    serviceDiscoveryType consul
+    authenticationType jwt
+    prodDatabaseType postgresql
+    serverPort 8081
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName bookApi
+    applicationType microservice
+    packageName com.bookapi.app
+    serviceDiscoveryType consul
+    authenticationType jwt
+    prodDatabaseType postgresql
+    serverPort 8082
+  }
+  entities *
+}
+
+
+application {
+  config {
+    baseName orderApi
+    applicationType microservice
+    packageName com.orderapi.app
+    serviceDiscoveryType consul
+    authenticationType jwt
+    prodDatabaseType postgresql
+    serverPort 8083
+  }
+  entities *
+}
+
+entity Book {
+  title String required
+  author String
+  publicationYear Integer
+  genre String
+  price Double required
+  quantityInStock Integer required
+}
+
+entity Customer {
+  name String required
+  email String required
+  address String
+  phone String
+}
+
+entity ShoppingCart {
+  purchaseDate Instant required
+  status String required
+}
+
+entity Order {
+  orderDate Instant required
+  status String required
+}
+
+relationship OneToMany {
+  ShoppingCart{books} to Book{shoppingCarts}
+}
+
+relationship ManyToOne {
+  ShoppingCart{order} to Order{shoppingCart}
+  Customer{orders} to Order{customer}
+}
