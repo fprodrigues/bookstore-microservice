@@ -7,10 +7,10 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
-        "orderApiBook": "Book",
-        "customerApiCustomer": "Customer",
-        "orderApiOrder": "Order",
-        "orderApiShoppingCart": "Shopping Cart",
+        "book": "Book",
+        "customer": "Customer",
+        "order": "Order",
+        "shoppingCart": "Shopping Cart",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

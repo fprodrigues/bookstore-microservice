@@ -2,18 +2,6 @@
   "generator-jhipster": {
     "applicationIndex": 0,
     "applicationType": "gateway",
-    "applications": {
-      "customerApi": {
-        "applicationIndex": 1,
-        "clientFramework": "no",
-        "serverPort": "8081"
-      },
-      "orderApi": {
-        "applicationIndex": 3,
-        "clientFramework": "no",
-        "serverPort": "8083"
-      }
-    },
     "authenticationType": "jwt",
     "baseName": "bookstore",
     "blueprints": [],
@@ -23,7 +11,7 @@
     "clientPackageManager": "npm",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "creationTimestamp": 1695007710650,
+    "creationTimestamp": 1695081047682,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "devServerPort": 4200,
@@ -37,9 +25,9 @@
     "gradleEnterpriseHost": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.9.4",
-    "jwtSecretKey": "YWY1MTQxYzI4NjQ2ZGFiYTNjNWZiYTI1ODM0YjgwODU2ODgyYmZlYWRmODlmMmEwZjhjZmZkYWNmYmYzZDhkM2JhMTc4ZjI1MGVjZjQ3OTc3MjZjMDkxNWVlNDRmYTk3MDYyMjJkYmMyOThjNzg3Mzg2ZTdjOTdjNGMxYmUwMDE=",
+    "jwtSecretKey": "NTUzNDRkZTUyZjBmYzgxMDhlM2JjMzNkMmEwYmM2YWIzM2Y0OTAwNzM0ODJlMzc4ZDU5NGE0N2FkZjI5NDVjNGQxOGE3Y2UyNzEzYTIzZTM4ZmEzMzAxZDY5M2EyYjc2ODcwMjU3NDVhMDJkZjhlOTMxODUxMjBlOTVjN2I4YjM=",
     "languages": ["en"],
-    "lastLiquibaseTimestamp": 1695007950000,
+    "lastLiquibaseTimestamp": 1695081287000,
     "messageBroker": false,
     "monorepository": true,
     "nativeLanguage": "en",

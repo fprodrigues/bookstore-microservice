@@ -46,6 +46,13 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.bookapi.app.domain.Book.class.getName());
+            createCache(cm, com.bookapi.app.domain.Customer.class.getName());
+            createCache(cm, com.bookapi.app.domain.Order.class.getName());
+            createCache(cm, com.bookapi.app.domain.Order.class.getName() + ".shoppingCarts");
+            createCache(cm, com.bookapi.app.domain.Order.class.getName() + ".customers");
+            createCache(cm, com.bookapi.app.domain.ShoppingCart.class.getName());
+            createCache(cm, com.bookapi.app.domain.ShoppingCart.class.getName() + ".books");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,7 +1,6 @@
 {
   "applications": ["bookstore", "customerApi", "bookApi", "orderApi"],
-  "changelogDate": "20230918032930",
-  "clientRootFolder": "orderApi",
+  "changelogDate": "20230918235147",
   "databaseType": "sql",
   "dto": "no",
   "embedded": false,
@@ -37,7 +36,6 @@
   ],
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
-  "microserviceName": "orderApi",
   "name": "Book",
   "pagination": "no",
   "readOnly": false,
